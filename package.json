@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.4.0",
+    "nodemon": "^1.17.2",
+    "ws": "^4.1.0"
+  }
+}
