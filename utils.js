@@ -1,11 +1,8 @@
 
-// let defaultTime = new Date().getTime();
 const dayTime = 1000 * 60 * 60 * 24 //1天；
 const hourTime = 1000 * 60 * 60;
 const minuteTime = 1000 * 60;
 const secondTime = 1000;
-
-// const step = secondTime;
 const vnum = 2554477;
 
 const setRandomValue = (integerNum, decimalNum) => {

@@ -6,18 +6,18 @@ var bodyParser = require('koa-bodyparser');
 const router = require('koa-router')();
 const wss = new WebSocket.Server({ server });
 const wsOper = require('./wsOperation.js');
+const config = require('./config');
 
 wss.on('connection', function connection(ws) {
 
   ws.on('message', function incoming(message) {
     wsOper.dealMessage(message, ws);
-
   });
 
 });
 
 app.use(router.routes());
 
-server.listen(3001, () => {
-  console.log('Server listening at port 3001...');
+server.listen(config.constant.PORT, () => {
+  console.log(`Server listening at port ${config.constant.PORT}...`);
 });
