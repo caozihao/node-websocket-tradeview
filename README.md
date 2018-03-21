@@ -6,7 +6,7 @@
 
 
     npm install
-    nodemon server.js  或 node server.js
+    nodemon server.js  /  node server.js
 
 
 ## 说明
