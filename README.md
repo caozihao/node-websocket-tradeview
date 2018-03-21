@@ -6,7 +6,7 @@
 
 
     npm install
-    nodemon server.js
+    nodemon server.js / node server.js
     
     
 
