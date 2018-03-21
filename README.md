@@ -6,10 +6,10 @@
 
 
     npm install
-    nodemon server.js
+    nodemon server.js  或 node server.js
 
 
 ## 说明
 
 * 如果页面被刷新或者websocket被中断，需重启该服务 
-* 可以修改config里面的参数配置
+* 数据是随机数，可以通过修改config里面的参数来修改数据
