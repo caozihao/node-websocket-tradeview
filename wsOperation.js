@@ -9,11 +9,14 @@ let Timer = null;
 const dealMessage = (message, ws) => {
   let data = JSON.parse(message);
   let { type, period, from, to, baseCurrencyId, targetCurrencyId } = data;
+
+  console.log('data ->', data);
   // 控制每次添加的时间数
-  let step = utils.transformTime(period) / config.constant.SPACE_TIME;
+
   // console.log('step ->', step);
 
   if (type === "kline") {
+    let step = utils.transformTime(period) / config.constant.SPACE_TIME;
     console.log('kline......')
     const params = {
       step,
@@ -38,7 +41,9 @@ const dealMessage = (message, ws) => {
         "code": 0,
         "type": "kline",
         "data": {
-          ...result
+          kLine: {
+            ...result
+          }
         }
       }
 
@@ -47,13 +52,15 @@ const dealMessage = (message, ws) => {
         "code": 0,
         "type": "kline",
         "data": {
-          t: [],
-          c: [],
-          o: [],
-          h: [],
-          l: [],
-          v: [],
-          s: "ok"
+          kLine: {
+            t: [],
+            c: [],
+            o: [],
+            h: [],
+            l: [],
+            v: [],
+            s: "ok"
+          }
         }
       }
     }

@@ -52,6 +52,7 @@ let setRandomData = (params) => {
       t.unshift(time);
     } else if (type === "back") {
       time = Math.floor((endTime + step * (increasingNum + i + 1)) / 1000);
+      // time = Math.floor(new Date().getTime() / 1000);//最新时间
       t.push(time);
     }
 
@@ -104,6 +105,11 @@ const transformTime = (time) => {
   if (time.indexOf('W') !== -1) {
     number = parseInt(time.split('W')[0]);
     return number * dayTime * 7
+  }
+
+  if (time.indexOf('M') !== -1) {
+    number = parseInt(time.split('W')[0]);
+    return number * dayTime * 30
   }
 }
 
